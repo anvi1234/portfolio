@@ -1,0 +1,19 @@
+
+<body>
+<div id="border">
+<h1 class="h1">{{title|uppercase}}</h1>
+
+
+<ag-grid-angular 
+style="width: 2500px; height:500px;" 
+class="ag-theme-balham"
+[enableSorting]="true"
+[enableFilter]="true"
+[rowData]="row" 
+[columnDefs]="column"
+rowSelection="multiple"
+
+>
+</ag-grid-angular>
+</div>
+</body>

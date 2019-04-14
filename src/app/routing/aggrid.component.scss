@@ -1,0 +1,21 @@
+
+@import "~ag-grid-community/dist/styles/ag-grid.css";
+@import "~ag-grid-community/dist/styles/ag-theme-balham.css";
+.h1{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+            
+            text-align: center;
+            position: relative;  
+          color:black;
+}
+#border{
+    
+    border-radius: 25px;
+    background: url("/assets/image/paper.jpeg");
+    background-position: left top;
+    background-repeat: repeat;
+    padding-top: 20px; 
+    padding-right:23px;
+    width: 1350px;
+    height: 1500px;
+   }

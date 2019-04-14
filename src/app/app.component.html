@@ -1,21 +1,115 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
 
-<router-outlet></router-outlet>
+
+
+
+<link rel="stylesheet" href="https://bootswatch.com/4/simplex/bootstrap.min.css">
+
+
+<div [ngClass]="'background'">
+    <div [ngClass]="'transparent'">
+   <div [ngClass]="multiClass">
+                    <a href="#line">ABOUT ME</a>&nbsp;&nbsp;&nbsp;
+                    <a href="#edu">EDUCATION</a>&nbsp;&nbsp;&nbsp;
+                    <a href="#job">SKILL</a>&nbsp;&nbsp;&nbsp;
+                    <a href="#">REACH OUT</a>&nbsp;&nbsp;&nbsp;
+                    <a href="#certifield">CERTIFIED</a>&nbsp;&nbsp;&nbsp;
+</div>
+    <div id="background2">
+            <h1>ANVESHIKA SRIVASTAVA</h1>
+            <p>Software Developer</p>
+
+            <img [src]="imageUrl" (click)="onClick()"  id="image1" style="cursor:pointer">
+           <div class="upload-btn">
+         <input type="file" accept="image/*" id="image2" (change)="handleFileInput($event.target.files)" capture style="display:none">
+         
+    </div>
+    </div>
+    
+</div>
+
+<div [ngClass]="aboutClass">
+        <h5>{{header}}</h5><hr id="line">
+        <h1>{{title}}</h1>
+        <p>To join a renowned Institution to enhance my skills and knowledge and to work for the growth of the Institution.IT Professional seeking a challenging and rewarding opportunity with an organization of repute which recognizes and utilizes my true potential while nurturing my analytical and technical skills in the field of IT. I am in best in web development.I always prefer to done my any project on the time or before time.I like to work on group project.I am also good in coading.I have good knowledge about HTML,CSS,php,javaScript,AngularJs and C.
+            And I am also good in hacking.
+        </p>
+    </div>
+    <div [ngClass]="eductionClass" id="edu">
+            <h5>{{education1}}</h5><hr id="line">
+            <h1>{{education2}}</h1>
+        </div>
+        
+  
+        
+            <div id="image1">
+            <h1>Little Angles Children Academy</h1>
+            <h6>2011-2013</h6>
+            <h4>High Sc+hool</h4>
+            <img src="assets/image/little.jpg" height="200" width="200">
+           </div>
+           <div id="image2">
+            <h1>D A V Academy</h1>
+            <h6>2013-2015</h6>
+            <h4>High School</h4>
+            <img src="assets/image/dav.jpg" height="200" width="200">
+           </div>
+           <div id="image3">
+            <h1>Gautam Buddha University</h1>
+            <h6>2016-2020</h6>
+            <h4>Btech (IT)</h4>
+            <img src="assets/image/gbu.jpg" height="200" width="200">
+           </div>
+           <div [ngClass]="aboutClass" id="job">
+            <h5>{{skill1}}</h5><hr id="line">
+            <h1>{{skill2|uppercase}}</h1>
+               <div id="boxed">
+                <a routerLink="/b"> <h1>Professional Skill</h1></a> 
+               </div>
+               <div id="boxed1">
+              <a routerLink="/d"> <h1>Professional Qualities</h1></a> 
+             </div>
+             <div id="boxed2">
+                <h1>Key Skill</h1>
+             </div>
+             <div id="boxed3">
+                <h1>Strength And Weakness</h1>
+             </div>
+        </div>
+           <div class="background3">
+            <div id="transparent1">
+            <p>"“Don’t Let Yesterday Take Up Too Much Of Today.”</p>
+            <h5>ASSIDUOUS</h5>
+
+       </div>
+            <div [ngClass]="certifiedClass" id="certifield">
+                <h5>CERTIFIED</h5>
+               
+                   
+                <img *ngFor='let url of urls'  [src]="url" height="140"> <br/>
+                <label id="#bb"> Enter Your File
+                <input type='file' (change)="onSelectFile($event)" multiple>
+            <script a href="javascript:void(0)"   (click)="OndeleteFiles(images)"><i class="fa fa-trash"></i> </script>
+                 </label>
+            
+              
+           
+        </div>
+                <div class="background4">
+                 <div id="transparent2">
+                     <form>
+                       
+                  <div class="col-sm-8">
+                           <input type="text" placeholder="Name"><br>
+                       
+                           <input type="text" placeholder="email"><br>
+                         
+                           <input type="text"placeholder="mobile" ><br>
+                           <button  class="personalbtn"type="submit">submit</button>
+                        </div>
+                            </form>
+                  </div>
+                     </div>
+           
+
+
+
